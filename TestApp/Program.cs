@@ -21,7 +21,31 @@ int b = 210000000;
 long c = checked(a + b);
 Console.WriteLine(c); */
 
-decimal a = 42.1M; // explicit type
+/*decimal a = 42.1M; // explicit type
 decimal b = 38.2M;
 decimal c = a + b;
-Console.WriteLine($"The answer is {c}");
+Console.WriteLine($"The answer is {c}"); */
+
+int a = 5;
+int b = 3;
+int c = a + b;
+
+/*if ((a + b) > 10)
+{
+    Console.WriteLine("The answer is greater than 10.");
+}
+else //otherwise
+{
+    Console.WriteLine("The answer is less than 10.");
+} */
+
+if ((a + b +c > 10) && (a == b))
+{
+    Console.WriteLine("The answer is greater than 10.");
+    Console.WriteLine("And the first number is equal to the second.");
+}
+else //otherwise
+{
+    Console.WriteLine("The answer is less than 10.");
+    Console.WriteLine("or the first number is not equal to the second.");
+}
