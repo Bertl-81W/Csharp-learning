@@ -26,41 +26,58 @@ decimal b = 38.2M;
 decimal c = a + b;
 Console.WriteLine($"The answer is {c}"); */
 
-using System.Diagnostics.Metrics;
-using System.Net.Http.Headers;
-
-int a = 5;
-int b = 3;
-int c = a + b;
-
-/*if ((a + b) > 10)
-{
-    Console.WriteLine("The answer is greater than 10.");
-}
-else //otherwise
-{
-    Console.WriteLine("The answer is less than 10.");
-} */
-
-/*if ((a + b +c > 10) && (a == b))
-{
-    Console.WriteLine("The answer is greater than 10.");
-    Console.WriteLine("And the first number is equal to the second.");
-}
-else //otherwise
-{
-    Console.WriteLine("The answer is less than 10.");
-    Console.WriteLine("or the first number is not equal to the second.");
-} */
-
-int counter = 10;
-do
-
-{
-    Console.WriteLine(counter);
-    counter++;
-}
-while (counter < 5);
 
 
+        /*if ((a + b) > 10)
+        {
+            Console.WriteLine("The answer is greater than 10.");
+        }
+        else //otherwise
+        {
+            Console.WriteLine("The answer is less than 10.");
+        } */
 
+        /*if ((a + b +c > 10) && (a == b))
+        {
+            Console.WriteLine("The answer is greater than 10.");
+            Console.WriteLine("And the first number is equal to the second.");
+        }
+        else //otherwise
+        {
+            Console.WriteLine("The answer is less than 10.");
+            Console.WriteLine("or the first number is not equal to the second.");
+        } */
+
+        /*int counter = 10;
+        do
+
+        {
+            Console.WriteLine(counter);
+            counter++;
+        }
+        while (counter < 5); */
+    
+       /* for (
+             int i = 0;  //initialize (start)
+             i < 5;   //conditional
+             i++)  //iteration (increment)
+        {
+            //DO A THING
+            Console.WriteLine(i);
+        } */
+
+        for (
+             int i = 0;  //initialize (start)
+             i < 5;   //conditional
+             i++)  //iteration (increment)
+        {
+            if (i == 3)
+            {
+            //DO A THING
+            Console.WriteLine(i);
+            }
+        }
+        
+    
+
+        
