@@ -66,7 +66,7 @@ Console.WriteLine($"The answer is {c}"); */
             Console.WriteLine(i);
         } */
 
-        for (
+        /*for (
              int i = 0;  //initialize (start)
              i < 5;   //conditional
              i++)  //iteration (increment)
@@ -76,7 +76,17 @@ Console.WriteLine($"The answer is {c}"); */
             //DO A THING
             Console.WriteLine(i);
             }
-        }
+        } */
+
+var names = new List<string> {"Ricardo", "Ana", "Felipe"};
+names.Add("Maria");
+names.Add("Sage");
+foreach (var name in names)
+{
+    Console.WriteLine($"Hello {name.ToUpper()}!");
+}
+
+
         
     
 
