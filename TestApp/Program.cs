@@ -92,7 +92,7 @@ Conso le.WriteLine(names[2]);
 Console.WriteLine(names[names.Count-1]);
 */
 
-var names = new string[] { "Scott", "Anna", "Felipe" };
+/* var names = new string[] { "Scott", "Anna", "Felipe" };
 
 // names.Add("Damian");  // List <t>
 
@@ -101,6 +101,17 @@ names = [..names,"Damian"];
 foreach (var name in names)
 {
     Console.WriteLine($"Hello {name.ToUpper()}!");
-}
+}  */
+
+var numbers = new List<int> { 35,36,17,16,15 };
+Console.WriteLine($"I found 99 at Index {numbers.IndexOf(99)}");
+
+numbers.Sort();
+Console.WriteLine($"I found 99 at Index {numbers.IndexOf(99)}");
+
+// foreach (var number in numbers)
+// {
+//     Console.WriteLine($"Hello {number}!");
+// }
 
     
