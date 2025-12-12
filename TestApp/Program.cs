@@ -78,16 +78,29 @@ Console.WriteLine($"The answer is {c}"); */
             }
         } */
 
-var names = new List<string> {"Ricardo", "Ana", "Felipe"};
+/*var names = new List<string> {"Ricardo", "Ana", "Felipe"};
+
 names.Add("Maria");
 names.Add("Sage");
+
+// foreach (var name in names)
+// {
+// Console.WriteLine($"Hello {name.ToUpper()}!");
+// }
+Console.WriteLine(names[0]);
+Conso le.WriteLine(names[2]);
+Console.WriteLine(names[names.Count-1]);
+*/
+
+var names = new string[] { "Scott", "Anna", "Felipe" };
+
+// names.Add("Damian");  // List <t>
+
+names = [..names,"Damian"];
+
 foreach (var name in names)
 {
     Console.WriteLine($"Hello {name.ToUpper()}!");
 }
 
-
-        
     
-
-        
