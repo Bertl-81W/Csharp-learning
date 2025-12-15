@@ -28,55 +28,55 @@ Console.WriteLine($"The answer is {c}"); */
 
 
 
-        /*if ((a + b) > 10)
-        {
-            Console.WriteLine("The answer is greater than 10.");
-        }
-        else //otherwise
-        {
-            Console.WriteLine("The answer is less than 10.");
-        } */
+/*if ((a + b) > 10)
+{
+    Console.WriteLine("The answer is greater than 10.");
+}
+else //otherwise
+{
+    Console.WriteLine("The answer is less than 10.");
+} */
 
-        /*if ((a + b +c > 10) && (a == b))
-        {
-            Console.WriteLine("The answer is greater than 10.");
-            Console.WriteLine("And the first number is equal to the second.");
-        }
-        else //otherwise
-        {
-            Console.WriteLine("The answer is less than 10.");
-            Console.WriteLine("or the first number is not equal to the second.");
-        } */
+/*if ((a + b +c > 10) && (a == b))
+{
+    Console.WriteLine("The answer is greater than 10.");
+    Console.WriteLine("And the first number is equal to the second.");
+}
+else //otherwise
+{
+    Console.WriteLine("The answer is less than 10.");
+    Console.WriteLine("or the first number is not equal to the second.");
+} */
 
-        /*int counter = 10;
-        do
+/*int counter = 10;
+do
 
-        {
-            Console.WriteLine(counter);
-            counter++;
-        }
-        while (counter < 5); */
-    
-       /* for (
-             int i = 0;  //initialize (start)
-             i < 5;   //conditional
-             i++)  //iteration (increment)
-        {
-            //DO A THING
-            Console.WriteLine(i);
-        } */
+{
+    Console.WriteLine(counter);
+    counter++;
+}
+while (counter < 5); */
 
-        /*for (
-             int i = 0;  //initialize (start)
-             i < 5;   //conditional
-             i++)  //iteration (increment)
-        {
-            if (i == 3)
-            {
-            //DO A THING
-            Console.WriteLine(i);
-            }
-        } */
+/* for (
+      int i = 0;  //initialize (start)
+      i < 5;   //conditional
+      i++)  //iteration (increment)
+ {
+     //DO A THING
+     Console.WriteLine(i);
+ } */
+
+/*for (
+     int i = 0;  //initialize (start)
+     i < 5;   //conditional
+     i++)  //iteration (increment)
+{
+    if (i == 3)
+    {
+    //DO A THING
+    Console.WriteLine(i);
+    }
+} */
 
 /*var names = new List<string> {"Ricardo", "Ana", "Felipe"};
 
@@ -103,15 +103,47 @@ foreach (var name in names)
     Console.WriteLine($"Hello {name.ToUpper()}!");
 }  */
 
-var numbers = new List<int> { 35,36,17,16,15 };
+/* var numbers = new List<int> { 35,36,17,16,15 };
 Console.WriteLine($"I found 99 at Index {numbers.IndexOf(99)}");
 
 numbers.Sort();
-Console.WriteLine($"I found 99 at Index {numbers.IndexOf(99)}");
+Console.WriteLine($"I found 99 at Index {numbers.IndexOf(99)}"); */
 
 // foreach (var number in numbers)
 // {
 //     Console.WriteLine($"Hello {number}!");
 // }
 
+// Specify the data source
+
+/*List<int> scores = [97, 92, 81, 60];
+
+for (int i = 0; i < scores.Count; i++)
+{
+    if (scores[i] > 80)
+    {
+        Console.WriteLine($"Found a score over 80 {scores[i]}");
+    }
+}
+
+return; */
+
+// Specify the data source
+
+List<int> scores = [97, 92, 81, 60];
+
+
+
+IEnumerable<int> scoreQuery =
+    from score in scores
+    where score > 80
+    select score;
+
+// Execute the query.
+
+foreach (int i in scoreQuery)
+{
+   
+    Console.Write(i + " ");
     
+}
