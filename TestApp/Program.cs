@@ -130,7 +130,7 @@ return; */
 
 // Specify the data source
 
-List<int> scores = [97, 92, 81, 60];
+/* List<int> scores = [97, 92, 81, 60];
 
 
 
@@ -146,4 +146,22 @@ foreach (int i in scoreQuery)
    
     Console.Write(i + " ");
     
+} */
+
+// Specify the data source
+
+List<int> scores = [3, 25, 82, 97, 92, 100, 81, 60];
+
+//Define the query expresion
+
+IEnumerable<string> scoreQuery =
+    from score in scores
+    where score > 80
+    orderby score descending
+    select $"The score is {score}";
+
+// Execute the query.    
+foreach (string s in scoreQuery)
+{
+    Console.WriteLine(s);
 }
