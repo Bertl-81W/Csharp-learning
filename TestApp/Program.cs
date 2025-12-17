@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-/*Console.WriteLine("Hello, Ricardo!");
+﻿/*Console.WriteLine("Hello, Ricardo!");
 
 string firstFriend = "Maria";
 
@@ -179,21 +178,68 @@ var scoreQuery2 = scores.Where(s => s > 80).
              OrderByDescending(s => s);
  */
 
- Console.WriteLine("Hi OOP!");    
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Hi OOP!");
 
-// instances of Person
-var p1 = new Person("Amadeus", "Mozart", new DateOnly(1980, 5, 15));
-var p2 = new Person("Frederic", "Chopin", new DateOnly(1980, 5, 15));
-var p3 = new Person("Johann", "Bach", new DateOnly(1980, 5, 15));
+        // instances of Person
+        var p1 = new Person("Amadeus", "Mozart", new DateOnly(1980, 5, 15));
+        var p2 = new Person("Frederic", "Chopin", new DateOnly(1980, 5, 15));
+        var p3 = new Person("Johann", "Bach", new DateOnly(1980, 5, 15));
 
-List<Person> people = [p1, p2, p3];
+        p1.Pets.Add(new Dog("Fred"));
+        p1.Pets.Add(new Dog("Barney"));
 
-Console.WriteLine(people.Count);
+        p2.Pets.Add(new Cat("Beyonce"));
+        p2.Pets.Add(new Cat("Cher"));
+
+        List<Person> people = [p1, p2, p3];
+
+        foreach (var person in people)
+        {
+            Console.WriteLine($"{person}");
+
+            foreach (var pet in person.Pets)
+            {
+                Console.WriteLine($"   {pet}");
+            }
+        }
+
+        Console.WriteLine(people.Count);
+    }
+}
 
 public class Person(string firstname, string lastname, DateOnly birthday)
 {
-    public string first { get; } = firstname;
-    public string last { get; } = lastname;        
+    public string First { get; } = firstname;
+    public string Last { get; } = lastname;        
 
-    public DateOnly birthday { get; } = birthday;
+    public DateOnly Birthday { get; } = birthday;
+    public List<Pet> Pets { get; } = new();
+    public override string ToString()
+    {
+        return $"Human {First} {Last}";
+    }
+
+}
+public abstract class Pet(string firstname)
+{
+    public string First { get; } = firstname;
+    public abstract string MakeNoise();
+    public override string ToString()
+    {
+        return $"My name is {First}, I am a {GetType().Name} and I {MakeNoise()}";
+    }
+}
+
+public class Cat(string firstname) : Pet(firstname)
+{
+    public override string MakeNoise() => "Meow!";     
+}
+
+public class Dog(string firstname ) : Pet(firstname)
+{        
+    public override string MakeNoise() => "Woof!";
 }
