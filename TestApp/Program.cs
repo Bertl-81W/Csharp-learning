@@ -166,6 +166,7 @@ foreach (string s in scoreQuery)
     Console.WriteLine(s);
 } */
 
+/*
 List<int> scores = [3, 25, 82, 97, 92, 100, 81, 60];
 
 IEnumerable<int> scoreQuery =
@@ -176,3 +177,23 @@ IEnumerable<int> scoreQuery =
 
 var scoreQuery2 = scores.Where(s => s > 80).
              OrderByDescending(s => s);
+ */
+
+ Console.WriteLine("Hi OOP!");    
+
+// instances of Person
+var p1 = new Person("Amadeus", "Mozart", new DateOnly(1980, 5, 15));
+var p2 = new Person("Frederic", "Chopin", new DateOnly(1980, 5, 15));
+var p3 = new Person("Johann", "Bach", new DateOnly(1980, 5, 15));
+
+List<Person> people = [p1, p2, p3];
+
+Console.WriteLine(people.Count);
+
+public class Person(string firstname, string lastname, DateOnly birthday)
+{
+    public string first { get; } = firstname;
+    public string last { get; } = lastname;        
+
+    public DateOnly birthday { get; } = birthday;
+}
